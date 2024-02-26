@@ -10,9 +10,7 @@ cloudinary.config({
 });
 
 const getPost = asyncHandler(async (req, res) => {
-  const { photoId } = req.body;
-
-  const post = await Post.findById(photoId);
+  const post = await Post.findOne({ _id: req.params.id });
   res.status(200).json({ success: true, data: post });
 });
 

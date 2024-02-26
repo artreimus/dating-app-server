@@ -12,7 +12,7 @@ cloudinary.config({
 
 const router = express.Router();
 
-router.get('/', getPost);
+router.get('/:id', getPost);
 router.post('/', createPost);
 
 export default router;
