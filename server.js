@@ -20,7 +20,7 @@ connectDB();
 
 const PORT = 5000;
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(loggerMiddleware);
 app.set('trust proxy', 1);
 app.use(
